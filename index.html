@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <form id="converter-form" onsubmit="return false;">
+            <div class="input-section">
+                <label for="temperature">Enter Temperature:</label>
+                <input type="number" id="temperature" placeholder="e.g., 32" required>
+            </div>
+            <div class="dropdowns">
+                <label for="from-unit">From:</label>
+                <select id="from-unit" required>
+                    <option value="C">Celsius</option>
+                    <option value="F">Fahrenheit</option>
+                    <option value="K">Kelvin</option>
+                </select>
+                <label for="to-unit">To:</label>
+                <select id="to-unit" required>
+                    <option value="C">Celsius</option>
+                    <option value="F">Fahrenheit</option>
+                    <option value="K">Kelvin</option>
+                </select>
+            </div>
+            <button type="submit" onclick="convertTemperature()">Convert</button>
+        </form>
+        <div class="result" id="result" aria-live="polite"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
